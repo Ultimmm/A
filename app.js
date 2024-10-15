@@ -4,6 +4,21 @@ const cors = require('cors');
 const app = express();
 const http = require('http').createServer(app);
 const io = require('socket.io')(http);
+import React from 'react';
+
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <h1>Welcome to My React App</h1>
+        <p>This is your main app component.</p>
+      </header>
+    </div>
+  );
+}
+
+export default App;
+
 
 // Middleware
 app.use(cors());
@@ -45,3 +60,16 @@ mongoose.connect('your-mongodb-url', {
 .then(() => console.log('MongoDB connected'))
 .catch((err) => console.log(err));
 app.use('/api/auth', require('./routes/auth'));
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';  // Global styles for your app
+import App from './App';  // Import the main App component
+
+// Render the App component into the root div in index.html
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+
