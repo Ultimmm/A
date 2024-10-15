@@ -21,6 +21,16 @@ io.on('connection', (socket) => {
         console.log('User disconnected');
     });
 });
+const path = require('path');
+
+// Serve the static files from the React app
+app.use(express.static(path.join(__dirname, '../client/build')));
+
+// Handles any requests that don't match the API routes
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
+});
+
 
 const PORT = process.env.PORT || 5000;
 
