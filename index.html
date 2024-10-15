@@ -4,15 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>My React App</title>
-    <link rel="stylesheet" href="%PUBLIC_URL%/styles.css" />
+    <title>React App</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!-- React will inject the app inside the #root div -->
-
-    <!-- Optional: Include a favicon or any other assets -->
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <div id="root">
+      <!-- React dynamically injects the following structure -->
+      <div class="App">
+        <header class="App-header">
+          <h1>Welcome to My React App</h1>
+          <p>This is your main app component.</p>
+        </header>
+      </div>
+    </div>
   </body>
 </html>
