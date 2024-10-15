@@ -47,3 +47,16 @@ function App() {
 }
 
 export default App;
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App'; // Importing App component
+
+// Rendering the App component into the #root div in index.html
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root') // This corresponds to the div in index.html
+);
+
