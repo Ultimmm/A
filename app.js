@@ -34,3 +34,4 @@ mongoose.connect('your-mongodb-url', {
 })
 .then(() => console.log('MongoDB connected'))
 .catch((err) => console.log(err));
+app.use('/api/auth', require('./routes/auth'));
