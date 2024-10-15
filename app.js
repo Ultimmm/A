@@ -27,3 +27,10 @@ const PORT = process.env.PORT || 5000;
 http.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
+// MongoDB Connection
+mongoose.connect('your-mongodb-url', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+})
+.then(() => console.log('MongoDB connected'))
+.catch((err) => console.log(err));
